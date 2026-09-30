@@ -1,0 +1,312 @@
+/* ==========================================================================
+   STACKLY ORGANIC FARMING - Contact Page Stylesheet (contact.css)
+   ========================================================================== */
+
+/* Contact Hero */
+.contact-hero {
+  padding: 10rem 0 6rem;
+  background: linear-gradient(rgba(8, 28, 21, 0.82), rgba(27, 67, 50, 0.88)), 
+              url('https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: var(--text-white);
+  text-align: center;
+}
+
+.contact-hero-title {
+  font-size: 3.5rem;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+}
+
+.contact-hero-text {
+  font-size: 1.2rem;
+  color: var(--border-green);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Info Cards Section */
+.contact-info-section {
+  padding: 5rem 0 3rem;
+  background: var(--bg-cream);
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+.contact-info-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-leaf);
+}
+
+.contact-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(46, 125, 50, 0.1);
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 1.25rem;
+}
+
+.contact-info-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+
+.contact-info-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Contact Main Section (Form + Map) */
+.contact-main-section {
+  padding: 3rem 0 6rem;
+  background: var(--bg-cream);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: stretch;
+}
+
+.contact-form-wrapper {
+  background: var(--bg-surface);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.contact-form-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-sub {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.faq-section {
+  padding: 6rem 0;
+  background: var(--bg-surface);
+}
+
+.faq-section .section-header {
+  margin-bottom: 2.5rem;
+}
+
+.accordion-container {
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.accordion-item {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-cream);
+  transition: var(--transition-fast);
+}
+
+.accordion-item.active {
+  border-color: var(--primary-green);
+  box-shadow: var(--shadow-sm);
+  background: var(--bg-surface);
+}
+
+.accordion-header {
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+}
+
+.accordion-header i {
+  color: var(--primary-green);
+  transition: var(--transition-fast);
+}
+
+.accordion-item.active .accordion-header i {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+  padding: 0 1.75rem;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding: 0 1.75rem 1.5rem;
+  transition: max-height 0.35s cubic-bezier(1, 0, 1, 0);
+}
+
+.accordion-content p {
+  color: var(--text-medium);
+  line-height: 1.7;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--bg-cream);
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--primary-green);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1);
+}
+
+.form-control.is-invalid {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.error-msg {
+  color: #ef4444;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: none;
+}
+
+.form-control.is-invalid + .error-msg {
+  display: block;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.form-submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Map Section */
+.map-wrapper {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.map-frame {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  background: #dfeee5;
+  overflow: hidden;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  display: block;
+  filter: saturate(0.9) contrast(1.1);
+}
+
+.map-info-box {
+  background: var(--bg-surface);
+  padding: 1.5rem 1.75rem 1.75rem;
+  color: var(--text-dark);
+}
+
+.map-info-box h4 {
+  font-size: 1.08rem;
+  margin-bottom: 0.55rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.map-info-box p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Form Submission Alert Banner */
+.form-alert {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  display: none;
+}
+
+.form-alert.success {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}

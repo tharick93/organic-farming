@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | STACKLY ORGANIC FARMING</title>
+  <meta name="description" content="Explore STACKLY's 10 core organic farming services: Soil management, bio-fertilizers, smart irrigation, crop monitoring, agronomist consultation, seed selection, and harvest distribution.">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="page-loader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">STACKLY ORGANIC</div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <i class="fa-solid fa-seedling"></i>
+        <span>STACKLY <span class="highlight">ORGANIC</span></span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="signup.html" class="nav-link">Signup</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+      </div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link active">Services</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="login.html" class="nav-link">Login</a>
+      <a href="signup.html" class="nav-link">Signup</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section class="services-hero">
+      <div class="container">
+        <span class="section-badge" style="background: rgba(82, 183, 136, 0.2); color: var(--accent-mint);"><i class="fa-solid fa-wheat-awn"></i> Sustainable Solutions</span>
+        <h1 class="services-hero-title">Our Organic Agriculture Services</h1>
+        <p class="services-hero-subtitle">Comprehensive agronomic solutions designed to build living soils, enhance crop immunity, save water resources, and maximize harvest profitability.</p>
+      </div>
+    </section>
+
+    <!-- CATEGORY FILTER BAR -->
+    <section class="filter-section">
+      <div class="container">
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Services</button>
+          <button class="filter-btn" data-filter="farming">Crop Farming</button>
+          <button class="filter-btn" data-filter="soil">Soil & Fertilizers</button>
+          <button class="filter-btn" data-filter="technology">Smart Tech & Water</button>
+          <button class="filter-btn" data-filter="consultation">Consultation</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 DETAILED SERVICES GRID -->
+    <section class="services-grid-section">
+      <div class="container">
+        <div class="services-grid">
+          
+          <!-- Service 1 -->
+          <div class="service-card-item reveal" data-category="farming">
+            <div class="service-img-holder">
+              <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Organic Crop Farming">
+              <span class="service-category-tag">Farming</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon-header">
+                <div class="service-icon-box"><i class="fa-solid fa-wheat-awn"></i></div>
+                <h3 class="service-title">1. Organic Crop Farming</h3>
+              </div>
+              <p class="service-desc">Complete multi-crop management using certified non-GMO heirloom varieties and natural companion planting to prevent monoculture vulnerabilities.</p>
+              <ul class="service-benefits-list">
+                <li><i class="fa-solid fa-circle-check"></i> High nutrient density produce</li>
+                <li><i class="fa-solid fa-circle-check"></i> Natural weed & pest resistance</li>
+              </ul>
+              <div class="service-card-footer">
+                <button class="btn btn-outline btn-sm view-service-detail" data-service="organic-crop" style="width: 100%;">View Details & Process</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card-item reveal" data-category="soil">
+            <div class="service-img-holder">
+                            <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=600&q=80" alt="Farm Consultation">
+
+              <span class="service-category-tag">Soil</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon-header">
+                <div class="service-icon-box"><i class="fa-solid fa-vial-virus"></i></div>
+                <h3 class="service-title">2. Soil Testing & Health</h3>
+              </div>
+              <p class="service-desc">Spectrometric soil analysis assessing organic matter %, nitrogen availability, microbial diversity, and heavy metal screening.</p>
+              <ul class="service-benefits-list">
+                <li><i class="fa-solid fa-circle-check"></i> Precise nutrient mapping</li>
+                <li><i class="fa-solid fa-circle-check"></i> Bio-char & compost recommendations</li>
+              </ul>
+              <div class="service-card-footer">
+                <button class="btn btn-outline btn-sm view-service-detail" data-service="soil-testing" style="width: 100%;">View Details & Process</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card-item reveal" data-category="soil">
+            <div class="service-img-holder">
+              <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Organic Crop Farming">
+
+              <span class="service-category-tag">Soil</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon-header">
+                <div class="service-icon-box"><i class="fa-solid fa-flask"></i></div>
+                <h3 class="service-title">3. Organic Fertilizers</h3>
+              </div>
+              <p class="service-desc">Custom-blended vermicompost, fish hydrolysate, seaweed extract, and fermented botanical teas rich in bio-available micro-minerals.</p>
+              <ul class="service-benefits-list">
+                <li><i class="fa-solid fa-circle-check"></i> Rapid root absorption</li>
+                <li><i class="fa-solid fa-circle-check"></i> Zero salt burn risk</li>
+              </ul>
+              <div class="service-card-footer">
+                <button class="btn btn-outline btn-sm view-service-detail" data-service="fertilizer-solutions" style="width: 100%;">View Details & Process</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card-item reveal" data-category="technology">
+            <div class="service-img-holder">
+              <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=600&q=80" alt="Sustainable Irrigation">
+              <span class="service-category-tag">Technology</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon-header">
+                <div class="service-icon-box"><i class="fa-solid fa-droplet"></i></div>
+                <h3 class="service-title">4. Sustainable Irrigation</h3>
+              </div>
+              <p class="service-desc">Solar-powered drip irrigation grids integrated with soil moisture probes to reduce evaporation loss and prevent overwatering.</p>
+              <ul class="service-benefits-list">
+                <li><i class="fa-solid fa-circle-check"></i> Saves up to 45% water</li>
+                <li><i class="fa-solid fa-circle-check"></i> Prevents root fungal rot</li>
+              </ul>
+              <div class="service-card-footer">
+                <button class="btn btn-outline btn-sm view-service-detail" data-service="sustainable-irrigation" style="width: 100%;">View Details & Process</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card-item reveal" data-category="technology">
+            <div class="service-img-holder">
+              <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80" alt="Crop Monitoring">
+              <span class="service-category-tag">Technology</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon-header">
+                <div class="service-icon-box"><i class="fa-solid fa-satellite-dish"></i></div>
+                <h3 class="service-title">5. Smart Crop Monitoring</h3>
+              </div>
+              <p class="service-desc">Satellite NDVI spectral analysis and drone field scanning to identify early pest outbreaks or nitrogen deficits long before visual symptoms appear.</p>
+              <ul class="service-benefits-list">
+                <li><i class="fa-solid fa-circle-check"></i> Early threat alerts</li>
+                <li><i class="fa-solid fa-circle-check"></i> Targeted precision intervention</li>
+              </ul>
+              <div class="service-card-footer">
+                <button class="btn btn-outline btn-sm view-service-detail" data-service="crop-monitoring" style="width: 100%;">View Details & Process</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card-item reveal" data-category="consultation">
+            <div class="service-img-holder">
+              <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=600&q=80" alt="Farm Consultation">
+              <span class="service-category-tag">Consultation</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon-header">
+                <div class="service-icon-box"><i class="fa-solid fa-user-doctor"></i></div>
+                <h3 class="service-title">6. Farm Consultation</h3>
+              </div>
+              <p class="service-desc">End-to-end guidance for conventional farms converting to certified organic operation—covering compliance documentation, crop selection, and soil transition.</p>
+              <ul class="service-benefits-list">
+                <li><i class="fa-solid fa-circle-check"></i> Faster organic certification</li>
+                <li><i class="fa-solid fa-circle-check"></i> Tailored agronomy roadmap</li>
+              </ul>
+              <div class="service-card-footer">
+                <button class="btn btn-outline btn-sm view-service-detail" data-service="farm-consultation" style="width: 100%;">View Details & Process</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge"><i class="fa-solid fa-circle-question"></i> Answers & Clarity</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about our organic farming techniques and partnership programs.</p>
+        </div>
+
+        <div class="accordion-container reveal">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span>How long does it take to convert a conventional farm to organic?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Typically, the transition period takes between 24 to 36 months depending on local certification standards. During this period, our agronomists utilize bio-char, cover cropping, and biological inoculants to rapidly flush synthetic residues from your soil.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Are organic fertilizers as effective as synthetic NPK fertilizers?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Yes! While synthetic chemical fertilizers provide a rapid, short-lived chemical rush that degrades soil microbiome, our organic bio-fertilizers feed both the plant and the soil ecosystem. This yields stronger cell walls, higher drought resilience, and equal or superior harvest tonnage over time.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>How does STACKLY help farmers sell their organic crops?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p>STACKLY operates a direct supply chain network connecting partner farms with wholesale distributors, grocery chains, and eco-conscious direct consumers, guaranteeing fair pricing and eliminating middleman markups.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section style="padding: 5rem 0; background: var(--bg-cream); text-align: center;">
+      <div class="container reveal">
+        <h2 class="section-title">Need a Custom Agronomy Solution?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Get in touch with our expert team to design a tailored farming protocol for your acreage.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-calendar-check"></i> Request Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- SERVICE DETAILS MODAL -->
+  <div class="modal-overlay" id="service-modal">
+    <div class="modal-card">
+      <div class="modal-close-btn"><i class="fa-solid fa-xmark"></i></div>
+      <span class="section-badge" style="margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-info"></i> Detailed Overview</span>
+      <h2 id="modal-service-title" style="font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 1rem;">Service Details</h2>
+      <p id="modal-service-desc" style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">Service description will appear here.</p>
+      
+      <div style="background: var(--bg-cream); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--primary-green); margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1rem; color: var(--primary-dark); margin-bottom: 0.5rem;">Standard Implementation Process</h4>
+        <p id="modal-service-process" style="font-size: 0.9rem; color: var(--text-medium);">Implementation workflow details.</p>
+      </div>
+
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Book This Service Now</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+ <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <i class="fa-solid fa-seedling"></i>
+            <span>STACKLY ORGANIC</span>
+          </a>
+          <p class="footer-desc">Empowering sustainable organic agriculture, healthy soil biomes, and clean farm-to-table food distribution systems nationwide.</p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home Page</a>
+            <a href="about.html">About STACKLY</a>
+            <a href="services.html">Farming Services</a>
+            <a href="contact.html">Contact Us</a>
+           
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Dashboards</h4>
+          <div class="footer-links">
+            <a href="login.html">Farmer Portal Login</a>
+            <a href="signup.html">Register New Account</a>
+            <a href="user.html">User Dashboard</a>
+            <a href="admin.html">Admin Dashboard</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.9rem; color: #a3b18a; margin-bottom: 1rem;">Subscribe for seasonal organic farming guides and market updates.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed to STACKLY Newsletter!', 'success');">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY ORGANIC FARMING. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Organic Certifications</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>

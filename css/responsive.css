@@ -1,0 +1,1015 @@
+/* ==========================================================================
+   STACKLY ORGANIC FARMING - Comprehensive Responsive Rules (responsive.css)
+   ========================================================================== */
+
+/* 1. Large Displays (1440px and below) */
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* 2. Standard Laptops / Desktops (1200px and below) */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 980px;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .contact-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .charts-grid, .dashboard-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 3. Small Laptops / Landscape Tablets (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 920px;
+  }
+
+  .nav-menu {
+    gap: 1.25rem;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .story-image-wrap img {
+    height: 380px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .auth-brand-side {
+    padding: 3rem 2rem;
+  }
+
+  .auth-brand-title {
+    font-size: 2.4rem;
+  }
+
+  /* Dashboard Adjustments */
+  .dashboard-wrapper {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    z-index: 1100;
+  }
+
+  .sidebar.mobile-open {
+    left: 0;
+  }
+
+  .dashboard-main {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .dashboard-content {
+    padding: 1.25rem;
+  }
+
+  .sidebar-toggle-btn {
+    display: block;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .charts-grid,
+  .dashboard-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 4. Tablets (992px and below) */
+@media screen and (max-width: 992px) {
+  .nav-menu, .nav-actions .btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .about-hero-title, .services-hero-title, .contact-hero-title {
+    font-size: 2.8rem;
+  }
+
+  .values-grid, .philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrapper {
+    min-height: 400px;
+  }
+
+  .dashboard-topbar {
+    padding: 0 1rem;
+    height: auto;
+    min-height: 75px;
+  }
+
+  .topbar-search {
+    width: 220px;
+  }
+
+  .dashboard-welcome {
+    padding: 1.75rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dashboard-welcome .btn {
+    width: auto;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* 5. Small Tablets & Large Phones (768px and below) */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 15px;
+  }
+
+  .timeline-container.left, .timeline-container.right {
+    left: 0;
+  }
+
+  .timeline-container::after {
+    left: 21px;
+  }
+
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-brand-side {
+    display: none; /* Hide full side graphic on mobile for compact auth view */
+  }
+
+  .topbar-search {
+    width: 200px;
+  }
+
+  .welcome-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* 6. Landscape Phones (576px and below) */
+@media screen and (max-width: 576px) {
+  .section-badge {
+    font-size: 0.75rem;
+  }
+
+  .about-hero-title, .services-hero-title, .contact-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .values-grid, .philosophy-grid, .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .contact-form-wrapper {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .topbar-search {
+    display: none;
+  }
+
+  .season-badge {
+    display: none;
+  }
+
+  .dashboard-topbar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .topbar-right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .dashboard-welcome {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 1.7rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 1.25rem;
+  }
+
+  .table-actions {
+    width: 100%;
+  }
+
+  .table-search {
+    width: 100%;
+  }
+
+  .modal-card {
+    padding: 1.5rem;
+  }
+}
+
+/* 7. Medium Phones (425px and below) */
+@media screen and (max-width: 425px) {
+  .site-header {
+    height: 70px;
+  }
+
+  .brand-logo {
+    font-size: 1.15rem;
+  }
+
+  .btn-lg {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .filter-bar {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .user-info {
+    display: none;
+  }
+}
+
+/* 8. Small Phones (375px and below) */
+@media screen and (max-width: 375px) {
+  .about-hero-title, .services-hero-title, .contact-hero-title {
+    font-size: 1.9rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}
+
+/* 9. Extra Small Phones (320px and below) */
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+
+  .brand-logo span {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+/* ============================================================
+   MOBILE OVERFLOW & HORIZONTAL SCROLL FIX
+   STACKLY ORGANIC FARMING DASHBOARD
+   ============================================================ */
+
+/* Global overflow protection */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+/* Dashboard wrapper */
+.dashboard-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* Main dashboard */
+.dashboard-main {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Dashboard content */
+.dashboard-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media screen and (max-width: 1024px) {
+
+  .dashboard-content {
+    padding: 1.25rem;
+  }
+
+  .dashboard-topbar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .stats-grid,
+  .charts-grid,
+  .dashboard-two-col {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .stat-card,
+  .chart-card,
+  .table-card,
+  .widget-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .chart-body {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .chart-header {
+    min-width: 0;
+  }
+
+  .chart-title {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .welcome-text {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .welcome-text h1,
+  .welcome-text p {
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* ============================================================
+   MOBILE - 768px
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .dashboard-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .dashboard-main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1rem;
+    overflow-x: hidden;
+  }
+
+
+  /* -----------------------------
+     TOPBAR
+     ----------------------------- */
+
+  .dashboard-topbar {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    min-width: 0;
+  }
+
+  .topbar-left {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .topbar-right {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .sidebar-toggle-btn {
+    flex-shrink: 0;
+  }
+
+
+  /* -----------------------------
+     WELCOME BANNER
+     ----------------------------- */
+
+  .dashboard-welcome {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.5rem;
+    overflow: hidden;
+  }
+
+  .welcome-text {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .welcome-text h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .welcome-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  .dashboard-welcome > div:last-child {
+    max-width: 100%;
+  }
+
+
+  /* -----------------------------
+     STAT CARDS
+     ----------------------------- */
+
+  .stats-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 1.3rem;
+  }
+
+  .stat-details {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .stat-value,
+  .stat-label,
+  .stat-trend {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+  }
+
+  .stat-trend {
+    font-size: 0.68rem;
+  }
+
+
+  /* -----------------------------
+     CHARTS
+     ----------------------------- */
+
+  .charts-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr !important;
+  }
+
+  .chart-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.25rem;
+    overflow: hidden;
+  }
+
+  .chart-header {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .chart-title {
+    min-width: 0;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .chart-body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 280px;
+  }
+
+  canvas {
+    max-width: 100% !important;
+  }
+
+
+  /* -----------------------------
+     TABLE SECTION
+     ----------------------------- */
+
+  .dashboard-two-col {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr !important;
+  }
+
+  .table-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .table-header-row {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .table-header-row .chart-title {
+    width: 100%;
+  }
+
+  .table-actions {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .table-search {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .data-table {
+    min-width: 700px;
+  }
+
+
+  /* -----------------------------
+     QUICK ACTIONS
+     ----------------------------- */
+
+  .quick-action-grid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .action-btn-card {
+    min-width: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+
+  /* -----------------------------
+     ACTIVITY
+     ----------------------------- */
+
+  .activity-item {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .activity-details {
+    min-width: 0;
+  }
+
+  .activity-details h5,
+  .activity-details p {
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE - 576px
+   ============================================================ */
+
+@media screen and (max-width: 576px) {
+
+  .dashboard-content {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+
+  .dashboard-topbar {
+    padding: 0 0.75rem;
+  }
+
+  .dashboard-welcome {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .welcome-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .welcome-text p {
+    font-size: 0.85rem;
+  }
+
+  .dashboard-welcome .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.35rem;
+  }
+
+  .chart-card {
+    padding: 1rem;
+  }
+
+  .chart-body {
+    height: 240px;
+  }
+
+  .chart-title {
+    font-size: 0.95rem;
+  }
+
+  .badge {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .quick-action-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table-card {
+    padding: 1rem;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL PHONES - 425px
+   ============================================================ */
+
+@media screen and (max-width: 425px) {
+
+  .dashboard-content {
+    padding: 0.65rem;
+  }
+
+  .dashboard-topbar {
+    padding: 0 0.65rem;
+  }
+
+  .dashboard-welcome {
+    padding: 1rem;
+  }
+
+  .welcome-text h1 {
+    font-size: 1.25rem;
+  }
+
+  .welcome-text p {
+    font-size: 0.8rem;
+  }
+
+  .stat-card {
+    padding: 0.9rem;
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 1.15rem;
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .stat-trend {
+    font-size: 0.65rem;
+  }
+
+  .chart-card {
+    padding: 0.85rem;
+  }
+
+  .chart-body {
+    height: 220px;
+  }
+
+  .quick-action-grid {
+    gap: 0.6rem;
+  }
+
+  .action-btn-card {
+    padding: 0.85rem 0.5rem;
+  }
+
+  .table-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table-search,
+  .table-actions select {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+
+/* ============================================================
+   EXTRA SMALL PHONES - 375px
+   ============================================================ */
+
+@media screen and (max-width: 375px) {
+
+  .dashboard-content {
+    padding: 0.5rem;
+  }
+
+  .dashboard-topbar {
+    padding: 0 0.5rem;
+  }
+
+  .dashboard-welcome {
+    padding: 0.9rem;
+  }
+
+  .welcome-text h1 {
+    font-size: 1.15rem;
+  }
+
+  .stat-card {
+    gap: 0.6rem;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .stat-value {
+    font-size: 1.15rem;
+  }
+
+  .chart-body {
+    height: 200px;
+  }
+
+  .chart-title {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ============================================================
+   320px DEVICES
+   ============================================================ */
+
+@media screen and (max-width: 320px) {
+
+  .dashboard-content {
+    padding: 0.4rem;
+  }
+
+  .dashboard-topbar {
+    padding: 0 0.4rem;
+  }
+
+  .dashboard-welcome {
+    padding: 0.8rem;
+  }
+
+  .welcome-text h1 {
+    font-size: 1.05rem;
+  }
+
+  .stat-card {
+    padding: 0.75rem;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.05rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .stat-trend {
+    font-size: 0.6rem;
+  }
+
+  .chart-card {
+    padding: 0.7rem;
+  }
+
+  .chart-body {
+    height: 180px;
+  }
+
+  .quick-action-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | STACKLY ORGANIC FARMING</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="page-loader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">STACKLY ORGANIC</div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <i class="fa-solid fa-seedling"></i>
+        <span>STACKLY <span class="highlight">ORGANIC</span></span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="signup.html" class="nav-link">Signup</a>
+      </nav>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="login.html" class="nav-link">Login</a>
+      <a href="signup.html" class="nav-link">Signup</a>
+    </div>
+  </aside>
+
+  <main style="padding: 10rem 0 6rem; background: var(--bg-cream); min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div class="container" style="max-width: 700px;">
+      
+      <div style="font-size: 6rem; color: var(--primary-green); margin-bottom: 1rem; animation: pulse 2s infinite;">
+        <i class="fa-solid fa-wheat-field-semi"></i>
+      </div>
+
+      <span class="section-badge"><i class="fa-solid fa-triangle-exclamation"></i> 404 Error</span>
+      <h1 style="font-size: 3rem; color: var(--primary-dark); margin: 1rem 0;">Oops! This Field Has Gone Missing.</h1>
+      
+      <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.7;">It looks like the crop row or page you were searching for hasn't been planted yet, or may have been harvested and relocated to another parcel.</p>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <button onclick="window.history.back();" class="btn btn-outline btn-lg"><i class="fa-solid fa-arrow-left"></i> Go Back</button>
+        <a href="index.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-house"></i> Back to Home</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY ORGANIC FARMING. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

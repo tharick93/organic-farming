@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | STACKLY ORGANIC FARMING</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="page-loader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">STACKLY ADMIN</div>
+  </div>
+
+  <div class="dashboard-wrapper">
+    
+    <!-- Admin Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-brand">
+          <i class="fa-solid fa-user-shield" style="color: var(--accent-mint);"></i>
+          <span>STACKLY ADMIN</span>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <span class="sidebar-menu-title">Admin Controls</span>
+        <a href="admin.html" class="sidebar-link active"><i class="fa-solid fa-chart-pie"></i> Executive Overview</a>
+        <a href="#farmers-section" class="sidebar-link"><i class="fa-solid fa-users"></i> Farmers Directory</a>
+        <a href="#customers-section" class="sidebar-link"><i class="fa-solid fa-basket-shopping"></i> Customers & Buyers</a>
+        <a href="#crops-admin-section" class="sidebar-link"><i class="fa-solid fa-wheat-field"></i> Farms & Crops</a>
+        <a href="services.html" class="sidebar-link"><i class="fa-solid fa-gears"></i> Platform Services</a>
+        
+        <span class="sidebar-menu-title" style="margin-top: 1rem;">Operations & Reports</span>
+        <a href="#orders-section" class="sidebar-link"><i class="fa-solid fa-truck-ramp-box"></i> Global Orders</a>
+        <a href="#analytics-section" class="sidebar-link"><i class="fa-solid fa-chart-line"></i> Platform Analytics</a>
+        <a href="#" class="sidebar-link" onclick="showToast('Downloading Financial PDF Report...', 'info');"><i class="fa-solid fa-file-invoice-dollar"></i> Payments & Reports</a>
+        <a href="#" class="sidebar-link" onclick="showToast('All system services operating at 100%', 'info');"><i class="fa-solid fa-sliders"></i> System Settings</a>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link" style="color: #ef4444;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout Admin</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-main">
+      
+      <!-- Admin Topbar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <div class="sidebar-toggle-btn"><i class="fa-solid fa-bars"></i></div>
+          <div class="topbar-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="admin-table-search" data-table="farmers-table" placeholder="Search farmers, crops, orders...">
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <div class="season-badge" style="background: #e0f2fe; color: #0284c7;">
+            <i class="fa-solid fa-shield-halved"></i> Admin System Mode
+          </div>
+
+          <div class="topbar-icon-btn" onclick="showToast('3 new organic certification requests pending', 'info');">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notification-badge"></span>
+          </div>
+
+          <div class="user-profile-btn">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="Admin Avatar" class="user-avatar">
+            <div class="user-info">
+              <span class="user-name">System Admin</span>
+              <span class="user-role">Superuser Operations</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Admin Content -->
+      <main class="dashboard-content">
+        
+        <!-- Header Banner -->
+        <section class="dashboard-welcome" style="background: linear-gradient(135deg, #0d2818, #1b4332);">
+          <div class="welcome-text">
+            <h1>Admin System Overview & Control</h1>
+            <p>Real-time platform performance monitoring across 1,650 registered farmers and 85,000 cultivated acres.</p>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button class="btn btn-white open-modal-btn" data-target-modal="modal-add-farmer"><i class="fa-solid fa-user-plus"></i> Add Farmer</button>
+            <button class="btn btn-secondary open-modal-btn" data-target-modal="modal-add-crop"><i class="fa-solid fa-plus"></i> Add Crop</button>
+          </div>
+        </section>
+
+        <!-- 8 KPI STAT CARDS -->
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon green"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-details">
+              <span class="stat-value">1,650</span>
+              <span class="stat-label">Total Farmers</span>
+              <span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> +12% this month</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon blue"><i class="fa-solid fa-basket-shopping"></i></div>
+            <div class="stat-details">
+              <span class="stat-value">8,420</span>
+              <span class="stat-label">Total Customers</span>
+              <span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> +18% active buyers</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon emerald"><i class="fa-solid fa-wheat-field"></i></div>
+            <div class="stat-details">
+              <span class="stat-value">450</span>
+              <span class="stat-label">Active Farms</span>
+              <span class="stat-trend up"><i class="fa-solid fa-circle-check"></i> 85,000 Acres</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon amber"><i class="fa-solid fa-seedling"></i></div>
+            <div class="stat-details">
+              <span class="stat-value">85</span>
+              <span class="stat-label">Total Crop Varieties</span>
+              <span class="stat-trend up"><i class="fa-solid fa-check"></i> Non-GMO Certified</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon purple"><i class="fa-solid fa-truck-fast"></i></div>
+            <div class="stat-details">
+              <span class="stat-value">3,120</span>
+              <span class="stat-label">Monthly Orders</span>
+              <span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> +95.4% fulfillment</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon teal"><i class="fa-solid fa-dollar-sign"></i></div>
+            <div class="stat-details">
+              <span class="stat-value">$175,000</span>
+              <span class="stat-label">Monthly Revenue</span>
+              <span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> +24% growth</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon amber"><i class="fa-solid fa-clock-history"></i></div>
+            <div class="stat-details">
+              <span class="stat-value">14</span>
+              <span class="stat-label">Pending Requests</span>
+              <span class="stat-trend down"><i class="fa-solid fa-circle-exclamation"></i> Action Required</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon green"><i class="fa-solid fa-earth-americas"></i></div>
+            <div class="stat-details">
+              <span class="stat-value">120</span>
+              <span class="stat-label">Sustainability Projects</span>
+              <span class="stat-trend up"><i class="fa-solid fa-star"></i> 100% Eco-Score</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7 ADMIN CHART.JS VISUALISATIONS -->
+        <section id="analytics-section" class="charts-grid">
+          
+          <!-- Chart 1: Farmer Growth (Line) -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title"><i class="fa-solid fa-chart-line" style="color: var(--primary-green);"></i> Farmer Registration Growth</h3>
+            </div>
+            <div class="chart-body">
+              <canvas id="chart-farmer-growth"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart 2: Category Doughnut -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title"><i class="fa-solid fa-chart-pie" style="color: var(--primary-green);"></i> Crop Category Share</h3>
+            </div>
+            <div class="chart-body">
+              <canvas id="chart-admin-doughnut"></canvas>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="charts-grid" style="grid-template-columns: 1fr 1fr;">
+          
+          <!-- Chart 3: Monthly Revenue Bar -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title"><i class="fa-solid fa-coins" style="color: var(--primary-green);"></i> Platform Gross Revenue Trend ($)</h3>
+            </div>
+            <div class="chart-body">
+              <canvas id="chart-admin-revenue"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart 4: Production Metric Tons -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title"><i class="fa-solid fa-wheat-awn" style="color: var(--primary-green);"></i> Yield Output by Category (Tons)</h3>
+            </div>
+            <div class="chart-body">
+              <canvas id="chart-admin-crops"></canvas>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="charts-grid" style="grid-template-columns: 1fr 1fr;">
+          
+          <!-- Chart 5: Orders Analytics Bar -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title"><i class="fa-solid fa-boxes-stacked" style="color: var(--primary-green);"></i> Weekly Orders Fulfillment</h3>
+            </div>
+            <div class="chart-body">
+              <canvas id="chart-admin-orders"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart 6: Regional Farm Performance -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title"><i class="fa-solid fa-location-crosshairs" style="color: var(--primary-green);"></i> Regional Soil Quality Index</h3>
+            </div>
+            <div class="chart-body">
+              <canvas id="chart-farm-performance"></canvas>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Chart 7: Sustainability Metrics -->
+        <section class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title"><i class="fa-solid fa-leaf" style="color: var(--primary-green);"></i> Environmental Impact Metrics Overview</h3>
+          </div>
+          <div class="chart-body" style="height: 280px;">
+            <canvas id="chart-sustainability-metrics"></canvas>
+          </div>
+        </section>
+
+        <!-- DYNAMIC DATA TABLES SECTION -->
+        
+        <!-- TABLE 1: FARMERS DIRECTORY TABLE -->
+        <section id="farmers-section" class="table-card">
+          <div class="table-header-row">
+            <h3 class="chart-title"><i class="fa-solid fa-users" style="color: var(--primary-green);"></i> Farmers Management Directory</h3>
+            <div class="table-actions">
+              <input type="text" class="table-search admin-table-search" data-table="farmers-table" placeholder="Filter farmers...">
+              <button class="btn btn-sm btn-primary open-modal-btn" data-target-modal="modal-add-farmer"><i class="fa-solid fa-plus"></i> Add Farmer</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" id="farmers-table">
+              <thead>
+                <tr>
+                  <th>Farmer ID</th>
+                  <th>Name</th>
+                  <th>Location</th>
+                  <th>Farm Size</th>
+                  <th>Crop Type</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>FRM-1024</td>
+                  <td><strong>Dr. Robert Sterling</strong></td>
+                  <td>California, USA</td>
+                  <td>120 Acres</td>
+                  <td>Organic Vegetables</td>
+                  <td><span class="badge badge-active">Active</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="showToast('Editing Farmer FRM-1024', 'info');">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>FRM-1025</td>
+                  <td><strong>Elena Rostova</strong></td>
+                  <td>Oregon, USA</td>
+                  <td>85 Acres</td>
+                  <td>Heirloom Grains</td>
+                  <td><span class="badge badge-active">Active</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="showToast('Editing Farmer FRM-1025', 'info');">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>FRM-1026</td>
+                  <td><strong>Marcus Vance</strong></td>
+                  <td>Washington, USA</td>
+                  <td>45 Acres</td>
+                  <td>Medicinal Herbs</td>
+                  <td><span class="badge badge-pending">Pending Audit</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="showToast('Audit report dispatched', 'info');">Audit</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- TABLE 2: CUSTOMERS TABLE -->
+        <section id="customers-section" class="table-card">
+          <div class="table-header-row">
+            <h3 class="chart-title"><i class="fa-solid fa-basket-shopping" style="color: var(--primary-green);"></i> Registered Customers</h3>
+            <div class="table-actions">
+              <input type="text" class="table-search admin-table-search" data-table="customers-table" placeholder="Filter customers...">
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" id="customers-table">
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Total Orders</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CUST-8801</td>
+                  <td><strong>Sarah Jenkins</strong></td>
+                  <td>sarah.j@example.com</td>
+                  <td>14 Orders</td>
+                  <td><span class="badge badge-active">VIP Member</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="showToast('Viewing Customer profile', 'info');">View</button></td>
+                </tr>
+                <tr>
+                  <td>CUST-8802</td>
+                  <td><strong>David Miller</strong></td>
+                  <td>dmiller@example.com</td>
+                  <td>8 Orders</td>
+                  <td><span class="badge badge-active">Active</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="showToast('Viewing Customer profile', 'info');">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- TABLE 3: CROPS TABLE -->
+        <section id="crops-admin-section" class="table-card">
+          <div class="table-header-row">
+            <h3 class="chart-title"><i class="fa-solid fa-wheat-field" style="color: var(--primary-green);"></i> Master Crop Database</h3>
+            <div class="table-actions">
+              <input type="text" class="table-search admin-table-search" data-table="crops-admin-table" placeholder="Filter crops...">
+              <button class="btn btn-sm btn-secondary open-modal-btn" data-target-modal="modal-add-crop"><i class="fa-solid fa-plus"></i> Add Crop</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" id="crops-admin-table">
+              <thead>
+                <tr>
+                  <th>Crop</th>
+                  <th>Category</th>
+                  <th>Quantity (Tons)</th>
+                  <th>Farm Location</th>
+                  <th>Harvest Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Heirloom Tomatoes</strong></td>
+                  <td>Vegetables</td>
+                  <td>140 Tons</td>
+                  <td>GreenValley Sector 4</td>
+                  <td>15 Oct 2026</td>
+                  <td><span class="badge badge-growing">Growing</span></td>
+                  <td><button class="btn btn-sm btn-outline">Manage</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Organic Spinach</strong></td>
+                  <td>Greens</td>
+                  <td>85 Tons</td>
+                  <td>Valley Plot 2</td>
+                  <td>05 Oct 2026</td>
+                  <td><span class="badge badge-ready">Harvest Ready</span></td>
+                  <td><button class="btn btn-sm btn-outline">Manage</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- TABLE 4: ORDERS TABLE -->
+        <section id="orders-section" class="table-card">
+          <div class="table-header-row">
+            <h3 class="chart-title"><i class="fa-solid fa-truck-fast" style="color: var(--primary-green);"></i> System Orders & Sales</h3>
+            <div class="table-actions">
+              <input type="text" class="table-search admin-table-search" data-table="orders-admin-table" placeholder="Filter orders...">
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" id="orders-admin-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Product</th>
+                  <th>Quantity</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#ORD-9941</td>
+                  <td>Sarah Jenkins</td>
+                  <td>Organic Veggie Crate</td>
+                  <td>5 Crates</td>
+                  <td>$245.00</td>
+                  <td><span class="badge badge-completed">Dispatched</span></td>
+                  <td>28 Sep 2026</td>
+                </tr>
+                <tr>
+                  <td>#ORD-9942</td>
+                  <td>Eco Market Corp</td>
+                  <td>Bulk Heritage Wheat</td>
+                  <td>2 Tons</td>
+                  <td>$1,850.00</td>
+                  <td><span class="badge badge-pending">Processing</span></td>
+                  <td>28 Sep 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+
+  <!-- ADMIN MODALS -->
+  
+  <!-- Modal 1: Add Farmer Modal -->
+  
+
+  <!-- Modal 2: Add Crop Modal -->
+
+
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

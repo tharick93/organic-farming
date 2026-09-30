@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | STACKLY ORGANIC FARMING</title>
+  <meta name="description" content="Get in touch with STACKLY Organic Farming specialists for soil testing, organic farming consultation, supply partnerships, and general inquiries.">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Loading Animation -->
+  <div id="page-loader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">STACKLY ORGANIC</div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <i class="fa-solid fa-seedling"></i>
+        <span>STACKLY <span class="highlight">ORGANIC</span></span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="signup.html" class="nav-link">Signup</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+      </div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="login.html" class="nav-link">Login</a>
+      <a href="signup.html" class="nav-link">Signup</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section class="contact-hero">
+      <div class="container">
+        <span class="section-badge" style="background: rgba(82, 183, 136, 0.2); color: var(--accent-mint);"><i class="fa-solid fa-headset"></i> We're Here to Help</span>
+        <h1 class="contact-hero-title">Connect With STACKLY</h1>
+        <p class="contact-hero-text">Have questions about converting to organic farming, purchasing bio-fertilizers, or becoming a retail distributor? Reach out to our agrarian specialists.</p>
+      </div>
+    </section>
+
+    <!-- INFO CARDS (Address, Phone, Email, Hours) -->
+    <section class="contact-info-section">
+      <div class="container">
+        <div class="contact-info-grid">
+          <div class="contact-info-card reveal">
+            <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+            <h3>Head Office</h3>
+            <p>108 Organic Valley Way,<br>Green Agri Hub, Suite 400<br>California, CA 95014</p>
+          </div>
+
+          <div class="contact-info-card reveal">
+            <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+            <h3>Phone Support</h3>
+            <p><strong>Toll Free:</strong> +1 (800) 555-FARM<br><strong>Direct:</strong> +1 (555) 349-8821</p>
+          </div>
+
+          <div class="contact-info-card reveal">
+            <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+            <h3>Email Address</h3>
+            <p><strong>Support:</strong> info@stacklyorganic.org<br><strong>Agronomy:</strong> experts@stacklyorganic.org</p>
+          </div>
+
+          <div class="contact-info-card reveal">
+            <div class="contact-icon-box"><i class="fa-solid fa-clock"></i></div>
+            <h3>Working Hours</h3>
+            <p><strong>Mon – Fri:</strong> 7:00 AM – 7:00 PM<br><strong>Saturday:</strong> 8:00 AM – 4:00 PM<br><strong>Sunday:</strong> Closed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM + MAP SECTION -->
+    <section class="contact-main-section">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Form Wrapper -->
+          <div class="contact-form-wrapper reveal">
+            <h2 class="contact-form-title">Send Us a Message</h2>
+            <p class="contact-form-sub">Fill out the form below and an agronomist will respond within 24 hours.</p>
+            
+            <div class="form-alert" id="contact-alert"></div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                
+                <div class="form-group">
+                  <label for="full-name">Full Name *</label>
+                  <input type="text" id="full-name" class="form-control" placeholder="John Doe">
+                  <span class="error-msg">Full Name is required</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" class="form-control" placeholder="john@example.com">
+                  <span class="error-msg">Valid email is required</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" class="form-control" placeholder="+1 (555) 000-0000">
+                  <span class="error-msg">Valid phone number is required</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="farming-interest">Farming Interest</label>
+                  <select id="farming-interest" class="form-control">
+                    <option value="Organic Crop Farming">Organic Crop Farming</option>
+                    <option value="Soil Testing">Soil Testing & Management</option>
+                    <option value="Organic Fertilizers">Organic Fertilizers</option>
+                    <option value="Smart Irrigation">Smart Irrigation</option>
+                    <option value="Farm Transition">Farm Transition Consultation</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="subject">Subject *</label>
+                  <input type="text" id="subject" class="form-control" placeholder="How can we assist your farm?">
+                  <span class="error-msg">Subject is required</span>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="message">Your Message *</label>
+                  <textarea id="message" class="form-control" placeholder="Tell us about your acreage, soil conditions, or crop requirements..."></textarea>
+                  <span class="error-msg">Message is required</span>
+                </div>
+
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg form-submit-btn"><i class="fa-solid fa-paper-plane"></i> Submit Inquiry</button>
+            </form>
+          </div>
+
+          <!-- Map Section -->
+          <div class="map-wrapper reveal" aria-label="Location map section">
+            <div class="map-frame">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4877%2C37.3304%2C-122.2505%2C37.4970&amp;layer=mapnik"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="STACKLY Organic Farming Location Map">
+              </iframe>
+            </div>
+            <div class="map-info-box">
+              <h4><i class="fa-solid fa-building-wheat" style="color: var(--primary-green);"></i> Visit Our Bio-Research Facility</h4>
+              <p>Guided tours of our soil testing laboratories and organic composting grounds are available every Thursday by prior appointment.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge"><i class="fa-solid fa-circle-question"></i> Help Center</span>
+          <h2 class="section-title">Contact & Advisory FAQs</h2>
+        </div>
+
+        <div class="accordion-container reveal">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span>Do you provide on-site farm visits for soil diagnostics?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Yes. Our field agronomists conduct on-site soil sampling and topographical scans for farms exceeding 10 acres. You can request a visit via the contact form above.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>How quickly will I receive my soil test results?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Standard lab spectrometry reports are generated within 3 to 5 business days after sample receipt, accompanied by a custom bio-nutrient plan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <i class="fa-solid fa-seedling"></i>
+            <span>STACKLY ORGANIC</span>
+          </a>
+          <p class="footer-desc">Empowering sustainable organic agriculture, healthy soil biomes, and clean farm-to-table food distribution systems nationwide.</p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home Page</a>
+            <a href="about.html">About STACKLY</a>
+            <a href="services.html">Farming Services</a>
+            <a href="contact.html">Contact Us</a>
+           
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Dashboards</h4>
+          <div class="footer-links">
+            <a href="login.html">Farmer Portal Login</a>
+            <a href="signup.html">Register New Account</a>
+            <a href="user.html">User Dashboard</a>
+            <a href="admin.html">Admin Dashboard</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.9rem; color: #a3b18a; margin-bottom: 1rem;">Subscribe for seasonal organic farming guides and market updates.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed to STACKLY Newsletter!', 'success');">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY ORGANIC FARMING. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Organic Certifications</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
